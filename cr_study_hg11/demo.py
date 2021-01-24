@@ -1,4 +1,9 @@
-print(2 + 2)
+from cr_study_hg11.hogwarts.sdet.Student import Student
+
+
+def num(): # 定义函数
+    print(2 + 2)
+
 print('C:\\some\\name')
 print(r'C:\some\name')   # 前边加r，不用输入两个\
 
@@ -12,3 +17,6 @@ print("C:\\some\\name\\{y}\\{x}".format(y=x, x=123))
 
 squares = [1, 4, 9, 16, 25]
 print(squares)
+
+
+Student() # 看顶部会导入这个包

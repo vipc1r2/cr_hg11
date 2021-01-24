@@ -1,0 +1,20 @@
+[
+  "unit/test_demo.py::TestDemo::test_demo",
+  "unit/test_demo.py::TestDemo::test_sum",
+  "unit/test_div.py::test_div_int",
+  "unit/test_div.py::test_div_int_param[10-5-3]",
+  "unit/test_div.py::test_div_int_param[1000000000-1-1000000000]",
+  "unit/test_div.py::test_div_int_param[10-2-5]",
+  "unit/test_div.py::test_div_int_param[100-200-0.5]",
+  "unit/test_div.py::test_div_float",
+  "unit/test_div.py::test_div_exception",
+  "unit/test_div.py::test_div_zero",
+  "unit/test_div1.py::test_div_int",
+  "unit/test_div1.py::test_div_float",
+  "unit/test_div1.py::test_div_exception",
+  "unit/test_div1.py::test_div_zero",
+  "unit/test_pytest.py::test_answer",
+  "unit/test_pytest.py::TestClass::()::test_one",
+  "unit/test_pytest.py::TestClass::()::test_two",
+  "unit/test_pytest.py::TestClass::()::test_zero_division"
+]

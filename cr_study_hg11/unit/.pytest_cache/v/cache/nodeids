@@ -1,0 +1,6 @@
+[
+  "test_div.py::test_div_int_param[10-5-3]",
+  "test_div.py::test_div_int_param[1000000000-1-1000000000]",
+  "test_div.py::test_div_int_param[10-2-5]",
+  "test_div.py::test_div_int_param[100-200-0.5]"
+]

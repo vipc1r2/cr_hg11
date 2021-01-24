@@ -1,0 +1,416 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1611493659583" stop="1611493659691">
+  <name>cr_study_hg11</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1611493659583" status="failed" stop="1611493659625">
+      <name>.Users.damaoermaohchr.Desktop.git.hg11study.cr_study_hg11.unit.test_demo.TestDemo.test_demo</name>
+      <failure>
+        <message>AssertionError: False is not true</message>
+        <stack-trace>self = &lt;cr_study_hg11.unit.test_demo.TestDemo testMethod=test_demo&gt;
+
+    def test_demo(self):
+        print("test_demo")
+&gt;       self.assertTrue(False)
+E       AssertionError: False is not true
+
+unit/test_demo.py:41: AssertionError</stack-trace>
+      </failure>
+      <attachments>
+        <attachment source="7f39c459-a1e1-4b30-9d2b-80daa46fbc90-attachment.txt" title="Captured stdout setup" type="text/plain"/>
+        <attachment source="46808ace-5864-4af4-ba67-28746e32f70b-attachment.txt" title="Captured stdout call" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="4587-MainThread"/>
+        <label name="host" value="damaoerchrdeMBP"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1611493659629" status="failed" stop="1611493659632">
+      <name>.Users.damaoermaohchr.Desktop.git.hg11study.cr_study_hg11.unit.test_demo.TestDemo.test_sum</name>
+      <failure>
+        <message>AssertionError: 4 != 3 : x=3 expection=3</message>
+        <stack-trace>self = &lt;cr_study_hg11.unit.test_demo.TestDemo testMethod=test_sum&gt;
+
+    def test_sum(self):
+        print("test_sum")
+        x = 1 + 2
+        print(x)
+&gt;       self.assertEqual(4, x, f'x={x} expection=3')  # 断言，（期望值，实际值)
+E       AssertionError: 4 != 3 : x=3 expection=3
+
+unit/test_demo.py:37: AssertionError</stack-trace>
+      </failure>
+      <attachments>
+        <attachment source="3504e20b-9671-4239-ad89-cd4852562c7d-attachment.txt" title="Captured stdout call" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="4587-MainThread"/>
+        <label name="host" value="damaoerchrdeMBP"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1611493659634" status="failed" stop="1611493659637">
+      <name>.Users.damaoermaohchr.Desktop.git.hg11study.cr_study_hg11.unit.test_div.test_div_int</name>
+      <failure>
+        <message>AssertionError: assert 2.0 == 3
+ +  where 2.0 = div(10, 5)</message>
+        <stack-trace>@pytest.mark.happy
+    def test_div_int():
+        assert div(10, 2) == 5
+&gt;       assert div(10, 5) == 3
+E       assert 2.0 == 3
+E        +  where 2.0 = div(10, 5)
+
+unit/test_div.py:11: AssertionError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="4587-MainThread"/>
+        <label name="host" value="damaoerchrdeMBP"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1611493659638" status="failed" stop="1611493659641">
+      <name>.Users.damaoermaohchr.Desktop.git.hg11study.cr_study_hg11.unit.test_div.test_div_int_param[10-5-3]</name>
+      <failure>
+        <message>AssertionError: assert 2.0 == 3
+ +  where 2.0 = div(10, 5)</message>
+        <stack-trace>number1 = 10, number2 = 5, expection = 3
+
+    @pytest.mark.happy
+    @pytest.mark.parametrize("number1, number2, expection", {
+        (10, 2, 5),
+        (10, 5, 3),
+        (1000000000, 1, 1000000000),
+        (100, 200, 0.5)
+    }) # 参数化（）中参数是变化的，命名参数名字，{(,,),(,,)}数据填充，参数化好处一个case失败不影响其他case
+    def test_div_int_param(number1, number2, expection):
+&gt;       assert div(number1, number2) == expection
+E       assert 2.0 == 3
+E        +  where 2.0 = div(10, 5)
+
+unit/test_div.py:24: AssertionError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="4587-MainThread"/>
+        <label name="host" value="damaoerchrdeMBP"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1611493659643" status="passed" stop="1611493659644">
+      <name>.Users.damaoermaohchr.Desktop.git.hg11study.cr_study_hg11.unit.test_div.test_div_int_param[1000000000-1-1000000000]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="4587-MainThread"/>
+        <label name="host" value="damaoerchrdeMBP"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1611493659645" status="passed" stop="1611493659646">
+      <name>.Users.damaoermaohchr.Desktop.git.hg11study.cr_study_hg11.unit.test_div.test_div_int_param[10-2-5]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="4587-MainThread"/>
+        <label name="host" value="damaoerchrdeMBP"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1611493659647" status="passed" stop="1611493659648">
+      <name>.Users.damaoermaohchr.Desktop.git.hg11study.cr_study_hg11.unit.test_div.test_div_int_param[100-200-0.5]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="4587-MainThread"/>
+        <label name="host" value="damaoerchrdeMBP"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1611493659649" status="failed" stop="1611493659651">
+      <name>.Users.damaoermaohchr.Desktop.git.hg11study.cr_study_hg11.unit.test_div.test_div_float</name>
+      <failure>
+        <message>AssertionError: assert 3.3333333333333335 == 3.33333333
+ +  where 3.3333333333333335 = div(10, 3)</message>
+        <stack-trace>@pytest.mark.happy
+    def test_div_float():
+&gt;       assert div(10, 3) == 3.33333333
+E       assert 3.3333333333333335 == 3.33333333
+E        +  where 3.3333333333333335 = div(10, 3)
+
+unit/test_div.py:34: AssertionError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="4587-MainThread"/>
+        <label name="host" value="damaoerchrdeMBP"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1611493659653" status="failed" stop="1611493659656">
+      <name>.Users.damaoermaohchr.Desktop.git.hg11study.cr_study_hg11.unit.test_div.test_div_exception</name>
+      <failure>
+        <message>TypeError: unsupported operand type(s) for /: 'int' and 'str'</message>
+        <stack-trace>@pytest.mark.exception
+    def test_div_exception():
+&gt;       assert div(10, 'a')
+
+unit/test_div.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = 10, b = 'a'
+
+    def div(a, b):
+        # todo: 健壮性、异常处理
+&gt;       return a/b
+E       TypeError: unsupported operand type(s) for /: 'int' and 'str'
+
+unit/div.py:3: TypeError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="4587-MainThread"/>
+        <label name="host" value="damaoerchrdeMBP"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1611493659657" status="failed" stop="1611493659660">
+      <name>.Users.damaoermaohchr.Desktop.git.hg11study.cr_study_hg11.unit.test_div.test_div_zero</name>
+      <failure>
+        <message>ZeroDivisionError: division by zero</message>
+        <stack-trace>@pytest.mark.exception
+    def test_div_zero():
+&gt;       assert div(10, 0) == None
+
+unit/test_div.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = 10, b = 0
+
+    def div(a, b):
+        # todo: 健壮性、异常处理
+&gt;       return a/b
+E       ZeroDivisionError: division by zero
+
+unit/div.py:3: ZeroDivisionError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="4587-MainThread"/>
+        <label name="host" value="damaoerchrdeMBP"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1611493659662" status="failed" stop="1611493659665">
+      <name>.Users.damaoermaohchr.Desktop.git.hg11study.cr_study_hg11.unit.test_div1.test_div_int</name>
+      <failure>
+        <message>AssertionError: assert 2.0 == 3
+ +  where 2.0 = div(10, 5)</message>
+        <stack-trace>def test_div_int():
+        assert div(10, 2) == 5
+&gt;       assert div(10, 5) == 3
+E       assert 2.0 == 3
+E        +  where 2.0 = div(10, 5)
+
+unit/test_div1.py:10: AssertionError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="4587-MainThread"/>
+        <label name="host" value="damaoerchrdeMBP"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1611493659666" status="failed" stop="1611493659668">
+      <name>.Users.damaoermaohchr.Desktop.git.hg11study.cr_study_hg11.unit.test_div1.test_div_float</name>
+      <failure>
+        <message>AssertionError: assert 3.3333333333333335 == 3.33333333
+ +  where 3.3333333333333335 = div(10, 3)</message>
+        <stack-trace>def test_div_float():
+&gt;       assert div(10, 3) == 3.33333333
+E       assert 3.3333333333333335 == 3.33333333
+E        +  where 3.3333333333333335 = div(10, 3)
+
+unit/test_div1.py:15: AssertionError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="4587-MainThread"/>
+        <label name="host" value="damaoerchrdeMBP"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1611493659670" status="failed" stop="1611493659672">
+      <name>.Users.damaoermaohchr.Desktop.git.hg11study.cr_study_hg11.unit.test_div1.test_div_exception</name>
+      <failure>
+        <message>TypeError: unsupported operand type(s) for /: 'int' and 'str'</message>
+        <stack-trace>def test_div_exception():
+&gt;       assert div(10, 'a')
+
+unit/test_div1.py:20: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = 10, b = 'a'
+
+    def div(a, b):
+        # todo: 健壮性、异常处理
+&gt;       return a/b
+E       TypeError: unsupported operand type(s) for /: 'int' and 'str'
+
+unit/div.py:3: TypeError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="4587-MainThread"/>
+        <label name="host" value="damaoerchrdeMBP"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1611493659674" status="failed" stop="1611493659677">
+      <name>.Users.damaoermaohchr.Desktop.git.hg11study.cr_study_hg11.unit.test_div1.test_div_zero</name>
+      <failure>
+        <message>ZeroDivisionError: division by zero</message>
+        <stack-trace>def test_div_zero():
+&gt;       assert div(10, 0) == None
+
+unit/test_div1.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = 10, b = 0
+
+    def div(a, b):
+        # todo: 健壮性、异常处理
+&gt;       return a/b
+E       ZeroDivisionError: division by zero
+
+unit/div.py:3: ZeroDivisionError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="4587-MainThread"/>
+        <label name="host" value="damaoerchrdeMBP"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1611493659679" status="failed" stop="1611493659682">
+      <name>.Users.damaoermaohchr.Desktop.git.hg11study.cr_study_hg11.unit.test_pytest.test_answer</name>
+      <failure>
+        <message>AssertionError: assert 4 == 5
+ +  where 4 = inc(3)</message>
+        <stack-trace>def test_answer():
+        # test开头的函数
+&gt;       assert inc(3) == 5
+E       assert 4 == 5
+E        +  where 4 = inc(3)
+
+unit/test_pytest.py:11: AssertionError</stack-trace>
+      </failure>
+      <attachments>
+        <attachment source="a982b702-cc42-4209-880f-518f41cf85e6-attachment.txt" title="Captured stdout setup" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="4587-MainThread"/>
+        <label name="host" value="damaoerchrdeMBP"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1611493659684" status="passed" stop="1611493659685">
+      <name>.Users.damaoermaohchr.Desktop.git.hg11study.cr_study_hg11.unit.test_pytest.TestClass.test_one</name>
+      <attachments>
+        <attachment source="c6c9870e-8cf6-489e-97d2-5abc186f9c25-attachment.txt" title="Captured stdout setup" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="4587-MainThread"/>
+        <label name="host" value="damaoerchrdeMBP"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1611493659686" status="failed" stop="1611493659688">
+      <name>.Users.damaoermaohchr.Desktop.git.hg11study.cr_study_hg11.unit.test_pytest.TestClass.test_two</name>
+      <failure>
+        <message>AssertionError: assert False
+ +  where False = hasattr('hello', 'check')</message>
+        <stack-trace>self = &lt;cr_study_hg11.unit.test_pytest.TestClass object at 0x1062f47f0&gt;
+
+    def test_two(self):
+        x = "hello"
+&gt;       assert hasattr(x, "check")
+E       AssertionError: assert False
+E        +  where False = hasattr('hello', 'check')
+
+unit/test_pytest.py:36: AssertionError</stack-trace>
+      </failure>
+      <attachments>
+        <attachment source="4e7d288b-db85-46c3-b9ff-31c931c31403-attachment.txt" title="Captured stdout setup" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="4587-MainThread"/>
+        <label name="host" value="damaoerchrdeMBP"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1611493659690" status="passed" stop="1611493659691">
+      <name>.Users.damaoermaohchr.Desktop.git.hg11study.cr_study_hg11.unit.test_pytest.TestClass.test_zero_division</name>
+      <attachments>
+        <attachment source="c04f5f71-31bc-4900-8db2-e0d27c700018-attachment.txt" title="Captured stdout setup" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="4587-MainThread"/>
+        <label name="host" value="damaoerchrdeMBP"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

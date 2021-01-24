@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="13" name="pytest" skips="0" tests="18" time="0.172"><testcase classname="unit.test_demo.TestDemo" file="unit/test_demo.py" line="38" name="test_demo" time="0.0014064311981201172"><failure message="AssertionError: False is not true">self = &lt;cr_study_hg11.unit.test_demo.TestDemo testMethod=test_demo&gt;
+
+    def test_demo(self):
+        print(&quot;test_demo&quot;)
+&gt;       self.assertTrue(False)
+E       AssertionError: False is not true
+
+unit/test_demo.py:41: AssertionError</failure><system-out>setupclass
+setup
+test_demo
+tearndown
+</system-out></testcase><testcase classname="unit.test_demo.TestDemo" file="unit/test_demo.py" line="32" name="test_sum" time="0.0008697509765625"><failure message="AssertionError: 4 != 3 : x=3 expection=3">self = &lt;cr_study_hg11.unit.test_demo.TestDemo testMethod=test_sum&gt;
+
+    def test_sum(self):
+        print(&quot;test_sum&quot;)
+        x = 1 + 2
+        print(x)
+&gt;       self.assertEqual(4, x, f&apos;x={x} expection=3&apos;)  # 断言，（期望值，实际值)
+E       AssertionError: 4 != 3 : x=3 expection=3
+
+unit/test_demo.py:37: AssertionError</failure><system-out>setup
+test_sum
+3
+tearndown
+teardownclass
+</system-out></testcase><testcase classname="unit.test_div" file="unit/test_div.py" line="7" name="test_div_int" time="0.0009551048278808594"><failure message="assert 2.0 == 3
+ +  where 2.0 = div(10, 5)">@pytest.mark.happy
+    def test_div_int():
+        assert div(10, 2) == 5
+&gt;       assert div(10, 5) == 3
+E       assert 2.0 == 3
+E        +  where 2.0 = div(10, 5)
+
+unit/test_div.py:11: AssertionError</failure></testcase><testcase classname="unit.test_div" file="unit/test_div.py" line="15" name="test_div_int_param[10-5-3]" time="0.0010328292846679688"><failure message="assert 2.0 == 3
+ +  where 2.0 = div(10, 5)">number1 = 10, number2 = 5, expection = 3
+
+    @pytest.mark.happy
+    @pytest.mark.parametrize(&quot;number1, number2, expection&quot;, {
+        (10, 2, 5),
+        (10, 5, 3),
+        (1000000000, 1, 1000000000),
+        (100, 200, 0.5)
+    }) # 参数化（）中参数是变化的，命名参数名字，{(,,),(,,)}数据填充，参数化好处一个case失败不影响其他case
+    def test_div_int_param(number1, number2, expection):
+&gt;       assert div(number1, number2) == expection
+E       assert 2.0 == 3
+E        +  where 2.0 = div(10, 5)
+
+unit/test_div.py:24: AssertionError</failure></testcase><testcase classname="unit.test_div" file="unit/test_div.py" line="15" name="test_div_int_param[1000000000-1-1000000000]" time="0.0008087158203125"></testcase><testcase classname="unit.test_div" file="unit/test_div.py" line="15" name="test_div_int_param[10-2-5]" time="0.0007929801940917969"></testcase><testcase classname="unit.test_div" file="unit/test_div.py" line="15" name="test_div_int_param[100-200-0.5]" time="0.0007848739624023438"></testcase><testcase classname="unit.test_div" file="unit/test_div.py" line="31" name="test_div_float" time="0.0008423328399658203"><failure message="assert 3.3333333333333335 == 3.33333333
+ +  where 3.3333333333333335 = div(10, 3)">@pytest.mark.happy
+    def test_div_float():
+&gt;       assert div(10, 3) == 3.33333333
+E       assert 3.3333333333333335 == 3.33333333
+E        +  where 3.3333333333333335 = div(10, 3)
+
+unit/test_div.py:34: AssertionError</failure></testcase><testcase classname="unit.test_div" file="unit/test_div.py" line="36" name="test_div_exception" time="0.0006380081176757812"><failure message="TypeError: unsupported operand type(s) for /: &apos;int&apos; and &apos;str&apos;">@pytest.mark.exception
+    def test_div_exception():
+&gt;       assert div(10, &apos;a&apos;)
+
+unit/test_div.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = 10, b = &apos;a&apos;
+
+    def div(a, b):
+        # todo: 健壮性、异常处理
+&gt;       return a/b
+E       TypeError: unsupported operand type(s) for /: &apos;int&apos; and &apos;str&apos;
+
+unit/div.py:3: TypeError</failure></testcase><testcase classname="unit.test_div" file="unit/test_div.py" line="41" name="test_div_zero" time="0.0007007122039794922"><failure message="ZeroDivisionError: division by zero">@pytest.mark.exception
+    def test_div_zero():
+&gt;       assert div(10, 0) == None
+
+unit/test_div.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = 10, b = 0
+
+    def div(a, b):
+        # todo: 健壮性、异常处理
+&gt;       return a/b
+E       ZeroDivisionError: division by zero
+
+unit/div.py:3: ZeroDivisionError</failure></testcase><testcase classname="unit.test_div1" file="unit/test_div1.py" line="7" name="test_div_int" time="0.0007691383361816406"><failure message="assert 2.0 == 3
+ +  where 2.0 = div(10, 5)">def test_div_int():
+        assert div(10, 2) == 5
+&gt;       assert div(10, 5) == 3
+E       assert 2.0 == 3
+E        +  where 2.0 = div(10, 5)
+
+unit/test_div1.py:10: AssertionError</failure></testcase><testcase classname="unit.test_div1" file="unit/test_div1.py" line="13" name="test_div_float" time="0.0007832050323486328"><failure message="assert 3.3333333333333335 == 3.33333333
+ +  where 3.3333333333333335 = div(10, 3)">def test_div_float():
+&gt;       assert div(10, 3) == 3.33333333
+E       assert 3.3333333333333335 == 3.33333333
+E        +  where 3.3333333333333335 = div(10, 3)
+
+unit/test_div1.py:15: AssertionError</failure></testcase><testcase classname="unit.test_div1" file="unit/test_div1.py" line="18" name="test_div_exception" time="0.0007317066192626953"><failure message="TypeError: unsupported operand type(s) for /: &apos;int&apos; and &apos;str&apos;">def test_div_exception():
+&gt;       assert div(10, &apos;a&apos;)
+
+unit/test_div1.py:20: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = 10, b = &apos;a&apos;
+
+    def div(a, b):
+        # todo: 健壮性、异常处理
+&gt;       return a/b
+E       TypeError: unsupported operand type(s) for /: &apos;int&apos; and &apos;str&apos;
+
+unit/div.py:3: TypeError</failure></testcase><testcase classname="unit.test_div1" file="unit/test_div1.py" line="23" name="test_div_zero" time="0.0007863044738769531"><failure message="ZeroDivisionError: division by zero">def test_div_zero():
+&gt;       assert div(10, 0) == None
+
+unit/test_div1.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = 10, b = 0
+
+    def div(a, b):
+        # todo: 健壮性、异常处理
+&gt;       return a/b
+E       ZeroDivisionError: division by zero
+
+unit/div.py:3: ZeroDivisionError</failure></testcase><testcase classname="unit.test_pytest" file="unit/test_pytest.py" line="8" name="test_answer" time="0.0010941028594970703"><failure message="assert 4 == 5
+ +  where 4 = inc(3)">def test_answer():
+        # test开头的函数
+&gt;       assert inc(3) == 5
+E       assert 4 == 5
+E        +  where 4 = inc(3)
+
+unit/test_pytest.py:11: AssertionError</failure><system-out>setup module
+setup function
+</system-out></testcase><testcase classname="unit.test_pytest.TestClass" file="unit/test_pytest.py" line="29" name="test_one" time="0.0007169246673583984"><system-out>setup class
+setup
+</system-out></testcase><testcase classname="unit.test_pytest.TestClass" file="unit/test_pytest.py" line="33" name="test_two" time="0.0007333755493164062"><failure message="AssertionError: assert False
+ +  where False = hasattr(&apos;hello&apos;, &apos;check&apos;)">self = &lt;cr_study_hg11.unit.test_pytest.TestClass object at 0x1062f47f0&gt;
+
+    def test_two(self):
+        x = &quot;hello&quot;
+&gt;       assert hasattr(x, &quot;check&quot;)
+E       AssertionError: assert False
+E        +  where False = hasattr(&apos;hello&apos;, &apos;check&apos;)
+
+unit/test_pytest.py:36: AssertionError</failure><system-out>setup
+</system-out></testcase><testcase classname="unit.test_pytest.TestClass" file="unit/test_pytest.py" line="37" name="test_zero_division" time="0.0007088184356689453"><system-out>setup
+</system-out></testcase></testsuite>

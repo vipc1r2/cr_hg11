@@ -1,0 +1,12 @@
+{
+  "test_demo.py::TestDemo::test_demo": true,
+  "test_demo.py::TestDemo::test_sum": true,
+  "test_div.py": true,
+  "test_div.py::test_div_int_param[10-5-3]": true,
+  "test_div1.py::test_div_exception": true,
+  "test_div1.py::test_div_int": true,
+  "test_pytest.py::TestClass::()::test_two": true,
+  "test_pytest.py::test_answer": true,
+  "test_unittest_demo.py::TestDemo::test_demo": true,
+  "test_unittest_demo.py::TestDemo::test_sum": true
+}
